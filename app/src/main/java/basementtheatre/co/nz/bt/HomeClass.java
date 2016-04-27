@@ -25,24 +25,19 @@ public class HomeClass extends AppCompatActivity
         setContentView(R.layout.activity_home_class);
 
         //set the fragment initially
-/*
+
         WhatsOnFragment fragment = new WhatsOnFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction=
-                getSupportFragmentManager().beginTransaction();
+        getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
-*/
+
+
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -93,20 +88,41 @@ public class HomeClass extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_WhatsOn) {
-/*
+
             WhatsOnFragment fragment = new WhatsOnFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction=
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
-*/
+
         } else if (id == R.id.nav_ComingUp) {
 
+            ComingUpFragment fragment = new ComingUpFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction=
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
+
         } else if (id == R.id.nav_About) {
+            AboutFragment fragment = new AboutFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction=
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_ContactAndLocation) {
+            ContactAndLocationFragment fragment = new ContactAndLocationFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction=
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_Settings) {
+            SettingsFragment fragment = new SettingsFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction=
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_send) {
 
