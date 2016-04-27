@@ -25,13 +25,13 @@ public class HomeClass extends AppCompatActivity
         setContentView(R.layout.activity_home_class);
 
         //set the fragment initially
-
+/*
         WhatsOnFragment fragment = new WhatsOnFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction=
                 getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
-
+*/
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -93,13 +93,13 @@ public class HomeClass extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_WhatsOn) {
-
+/*
             WhatsOnFragment fragment = new WhatsOnFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction=
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
-
+*/
         } else if (id == R.id.nav_ComingUp) {
 
         } else if (id == R.id.nav_About) {
