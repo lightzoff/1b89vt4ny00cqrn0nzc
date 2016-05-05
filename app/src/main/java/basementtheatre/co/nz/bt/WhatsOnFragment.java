@@ -28,11 +28,11 @@ public class WhatsOnFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_whats_on_, container, false);
-      //  ImageButton button1 = (ImageButton) getView().findViewById(R.id.button1);
-     //  button1.setOnClickListener(new View.OnClickListener() {
+       // ImageButton button1 = (ImageButton) getView().findViewById(R.id.button1);
+       // button1.setOnClickListener(new View.OnClickListener() {
 
-        //    @Override
-        //    public void onClick(View v) {
+          //  @Override
+          //  public void onClick(View v) {
                 //   FragmentManager fm = getFragmentManager();
                 //   ft.commit();
                 //  FragmentTransaction ft = fm.beginTransaction();
@@ -41,8 +41,7 @@ public class WhatsOnFragment extends Fragment {
 
                 //   });
                 //   }
-        //    }
-     //   });
+
     }
 }
 
