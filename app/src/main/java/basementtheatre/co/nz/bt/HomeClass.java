@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -21,6 +22,8 @@ public class HomeClass extends AppCompatActivity
     NavigationView navigationView = null;
     Toolbar toolbar = null;
 
+    public static FragmentManager fragmentManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +39,7 @@ public class HomeClass extends AppCompatActivity
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
 
-
+        fragmentManager = getSupportFragmentManager();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);

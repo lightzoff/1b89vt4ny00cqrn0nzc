@@ -1,4 +1,4 @@
-package basementtheatre.co.nz.mylibrary;
+package com.example.mylibrary;
 
 import org.junit.Test;
 

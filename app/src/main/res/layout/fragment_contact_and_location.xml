@@ -1,18 +1,14 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="basementtheatre.co.nz.bt.ContactAndLocationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <fragment
+        android:id="@+id/ContactAndLocationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" />
 
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact and Location"
-        android:id="@+id/checkBox"
-        android:layout_gravity="center"
-        android:checked="false" />
-
-</FrameLayout>
+</RelativeLayout>
