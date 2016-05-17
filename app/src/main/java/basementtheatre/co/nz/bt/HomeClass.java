@@ -26,14 +26,7 @@ public class HomeClass extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_class);
 
-        Button btn = (Button) findViewById(R.id.buttonSignup);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SignUp();
-            }
 
-        });
 
         //set the fragment initially
 
@@ -46,7 +39,7 @@ public class HomeClass extends AppCompatActivity
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
 
 
@@ -60,10 +53,6 @@ public class HomeClass extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    public void SignUp() {
-        Intent in = new Intent(this, SignupActivity.class);
-        this.startActivity(in);
-    }
 
     @Override
     public void onBackPressed() {
@@ -139,8 +128,6 @@ public class HomeClass extends AppCompatActivity
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
-
-        } else if (id == R.id.nav_send) {
 
         }
 
