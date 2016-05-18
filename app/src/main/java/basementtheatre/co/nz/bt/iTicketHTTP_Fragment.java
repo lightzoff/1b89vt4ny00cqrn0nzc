@@ -15,7 +15,7 @@ public class iTicketHTTP_Fragment extends Fragment {
 
 
     public iTicketHTTP_Fragment() {
-        // Required empty public constructor
+        // Required empty public constructor/
     }
 
 
