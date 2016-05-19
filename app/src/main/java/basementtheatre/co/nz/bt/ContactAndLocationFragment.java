@@ -4,6 +4,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,110 +14,37 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-public class ContactAndLocationFragment extends Fragment implements OnMapReadyCallback{
+public class ContactAndLocationFragment extends Fragment implements OnMapReadyCallback {
 
-    private static View view;
+
     /**
      * Note that this may be null if the Google Play services APK is not
      * available.
      */
     private static GoogleMap mMap;
-
+    private SupportMapFragment mapFrag;
     private static Double latitude, longitude;
 
 
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-
-        if (container == null) {
-            return null;
-        }
-
-        view = (RelativeLayout) inflater.inflate(R.layout.fragment_contact_and_location, container, false);
-        // Passing harcoded values for latitude & longitude. Please change as per your need. This is just used to drop a Marker on the Map
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         latitude = -36.853654439472;
         longitude = 174.76280283467;
+        View rootView = inflater.inflate(R.layout.fragment_contact_and_location, container, false);
 
-        setUpMapIfNeeded(); // For setting up the MapFragment
+        mapFrag = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.ContactAndLocationFragment));
+        mapFrag.getMapAsync(this);
 
-
-        return view;
+        return rootView;
     }
-
 
     @Override
     public void onMapReady(GoogleMap map) {
-            mMap = map;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        setUpMapIfNeeded();
-    }
-    /***** Sets up the map if it is possible to do so *****/
-    public static void setUpMapIfNeeded() {
-        // Do a null check to confirm that we have not already instantiated the map.
-
-        if (mMap == null) {
-            // Try to obtain the map from the SupportMapFragment.
-             //mMap = ((SupportMapFragment) HomeClass.fragmentManager.findFragmentById(R.id.ContactAndLocationFragment)).getMap(); // getMap is deprecated
-            //mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.ContactAndLocationFragment)).getMap();
-            // Check if we were successful in obtaining the map.
-            if (mMap != null)
-                setUpMap();
-        }
-    }
-
-
-
-    /**
-     * This is where we can add markers or lines, add listeners or move the
-     * camera.
-     * <p>
-     * This should only be called once and when we are sure that {@link #mMap}
-     * is not null.
-     */
-    private static void setUpMap() {
-
-        // For dropping a marker at a point on the Map
-        mMap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude)).title("Basement Theatre").snippet("Home Address"));
-        // For zooming automatically to the Dropped PIN Location
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude,
-                longitude), 12.0f));
-    }
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
-       // mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-      //  mMap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude)).title("Basement Theatre").snippet("Basement Theatre"));
-
-
-
-        if (mMap != null)
-            setUpMap();
-
-        if (mMap == null) {
-            // Try to obtain the map from the SupportMapFragment.
-           //mMap = ((SupportMapFragment) HomeClass.fragmentManager.findFragmentById(R.id.ContactAndLocationFragment)).getMap(); // getMap is deprecated
-            // Check if we were successful in obtaining the map.
-            if (mMap != null)
-                setUpMap();
-        }
-    }
-
-    /**** The mapfragment's id must be removed from the FragmentManager
-     **** or else if the same it is passed on the next time then
-     **** app will crash ****/
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        if (mMap != null) {
-            HomeClass.fragmentManager.beginTransaction()
-                    .remove(HomeClass.fragmentManager.findFragmentById(R.id.ContactAndLocationFragment)).commit();
-            mMap = null;
-        }
+        mMap = map;
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        mMap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude)).title("Basement Theatre"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 19));
     }
 }
