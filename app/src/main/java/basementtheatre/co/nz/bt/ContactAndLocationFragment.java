@@ -44,7 +44,7 @@ public class ContactAndLocationFragment extends Fragment implements OnMapReadyCa
     public void onMapReady(GoogleMap map) {
         mMap = map;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        mMap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude)).title("Basement Theatre"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude)).title("Basement Theatre").snippet("321 Queen St,Auckland CBD"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 19));
     }
 }
