@@ -25,12 +25,7 @@
             android:text="Presented by Creeping Charlie."
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bro3" />
+
 
         <Button
             android:id="@+id/button"
@@ -54,12 +49,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/dope2" />
+
 
         <Button
             android:id="@+id/button3"
@@ -82,12 +72,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/tinder2" />
+
 
         <Button
             android:id="@+id/button2"
