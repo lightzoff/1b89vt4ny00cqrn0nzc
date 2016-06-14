@@ -11,6 +11,70 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/winter" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Winter Season"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Presented by different performers each week."
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KNOW MORE" />
+
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/snort" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snort"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Presented by Rose Matafeo, Guy Montgomery, Joseph Moore."
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KNOW MORE" />
+
+
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bro3" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -33,6 +97,12 @@
             android:layout_height="wrap_content"
             android:text="KNOW MORE" />
 
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/dope2" />
 
         <TextView
             android:id="@+id/textView3"
@@ -57,6 +127,14 @@
             android:layout_height="wrap_content"
             android:text="KNOW MORE" />
 
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/tinder2" />
+
+
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
@@ -70,7 +148,6 @@
             android:layout_height="wrap_content"
             android:text="“One woman power house” – ThreeWeeks, UK"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-
 
 
 
