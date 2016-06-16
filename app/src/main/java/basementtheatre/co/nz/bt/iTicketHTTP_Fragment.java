@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+//Unimplemented Iticket fragment, was meant to have an api for ticket purchases
 
 /**
  * A simple {@link Fragment} subclass.

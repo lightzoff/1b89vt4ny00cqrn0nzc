@@ -22,7 +22,7 @@ import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
-
+//Facebook login fragment
 
 public class fragment_main extends Fragment {
 
@@ -32,6 +32,8 @@ public class fragment_main extends Fragment {
     private AccessTokenTracker nTokenTracker;
     private ProfileTracker nProfileTracker;
     private FacebookCallback<LoginResult> mCallback = new FacebookCallback<LoginResult>() {
+
+        //Login request
         @Override
         public void onSuccess(LoginResult loginResult) {
             AccessToken accessToken = loginResult.getAccessToken();
@@ -69,7 +71,7 @@ public class fragment_main extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+    //welcome message
     private void displayWelcomeMessage(Profile profile){
         if (profile != null){
             mTextDetails.setText("Welcome" + profile.getName());
@@ -95,7 +97,7 @@ public class fragment_main extends Fragment {
         nTokenTracker.startTracking();
         nProfileTracker.startTracking();
     }
-
+    //Retrieves main fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -111,6 +113,7 @@ public class fragment_main extends Fragment {
         }
     }
 
+    //Fragment listener
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -121,20 +124,20 @@ public class fragment_main extends Fragment {
                     + " must implement OnFragmentInteractionListener");
         }
     }
-
+    //On detach
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
-
+    //On resume of application
     @Override
     public void onResume() {
         super.onResume();
         Profile profile=Profile.getCurrentProfile();
         displayWelcomeMessage(profile);
     }
-
+    //login button
     public void onViewCreated(View view, Bundle savedInstancesState){
         super.onViewCreated(view, savedInstancesState);
         LoginButton loginButton =(LoginButton) view.findViewById(R.id.login_button);
@@ -148,7 +151,7 @@ public class fragment_main extends Fragment {
         super.onActivityResult(requestCode,resultCode,data);
         mCallbackManager.onActivityResult(requestCode,resultCode,data);
     }
-
+    //when the application is ended
     @Override
     public void onStop() {
         super.onStop();

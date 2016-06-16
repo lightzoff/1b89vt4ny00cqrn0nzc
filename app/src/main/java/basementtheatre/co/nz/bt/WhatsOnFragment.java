@@ -16,6 +16,8 @@ import android.widget.ImageButton;
 /**
  * A simple {@link Fragment} subclass.
  */
+//Inflates fragment from the navigation bar, view xml for structure - fragment_coming_up
+    //Commented out fragment manager to inflate the rate and review fragment
 public class WhatsOnFragment extends Fragment {
 
 

@@ -8,8 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-
+//Inflates fragment from the navigation bar, view xml for structure - fragment_about
 /**
  * A simple {@link Fragment} subclass.
  */

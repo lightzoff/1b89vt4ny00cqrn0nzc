@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
+//Inflates fragment from the navigation bar, view xml for structure - fragment_settings
 /**
  * A simple {@link Fragment} subclass.
  */

@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+//Home class which implements the navigation menu for each of the fragments
 
 public class HomeClass extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,6 +25,7 @@ public class HomeClass extends AppCompatActivity
 
     public static FragmentManager fragmentManager;
 
+    //Sets the fragment
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,7 @@ public class HomeClass extends AppCompatActivity
 
 
         //set the fragment initially
-
+    //Navigation menu of each fragment
         WhatsOnFragment fragment = new WhatsOnFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction=
         getSupportFragmentManager().beginTransaction();
@@ -45,7 +47,7 @@ public class HomeClass extends AppCompatActivity
         //setSupportActionBar(toolbar);
 
 
-
+    //Navigation manager, listens to selected
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -56,7 +58,7 @@ public class HomeClass extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-
+    //When the back button is hit
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -73,7 +75,7 @@ public class HomeClass extends AppCompatActivity
         getMenuInflater().inflate(R.menu.home_class, menu);
         return true;
     }
-
+    //Retrieving what fragment the user selected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -89,6 +91,7 @@ public class HomeClass extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    //Navigation for each fragment used utilising support manager, Onclick method
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

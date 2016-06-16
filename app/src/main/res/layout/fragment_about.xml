@@ -12,9 +12,9 @@
         android:text="Our Story"
         android:textSize="50sp"
         android:id="@+id/textView2"
-        android:layout_marginTop="60dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         android:text="The Basement is Auckland’s culture-defining powerhouse - home to an artistic mixtape of theatre makers, dancers, visual artists, poets, musicians, comedians and everyone in between. We proudly showcase the best new voices and fresh perspectives, with world premieres making up over half of our programme. So come watch sweat drip and spit fly as some of the brightest new talent earn their chops at our place. You can’t download theatre - come get something live. "
         android:id="@+id/textView3"
         android:textSize="14sp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

@@ -13,6 +13,8 @@ import java.security.NoSuchAlgorithmException;
 /**
  * Created by jozel_000 on 12/05/2016.
  */
+
+//Redirects the application to the Basement Theatre website
 public class MyApplication extends Application {
 
     @Override

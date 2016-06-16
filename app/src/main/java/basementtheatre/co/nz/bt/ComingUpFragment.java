@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+//Inflates fragment from the navigation bar, view xml for structure - fragment_coming_up
 
 /**
  * A simple {@link Fragment} subclass.

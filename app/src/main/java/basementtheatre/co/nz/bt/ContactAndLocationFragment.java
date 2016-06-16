@@ -12,7 +12,8 @@ import android.widget.RelativeLayout;
 import com.google.android.gms.maps.*;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
+//Inflates fragment from the navigation bar
+//Retrieves the map fragment, retrieves longitude, latitude, sets google map to free roam with destination
 
 public class ContactAndLocationFragment extends Fragment implements OnMapReadyCallback {
 
@@ -26,7 +27,7 @@ public class ContactAndLocationFragment extends Fragment implements OnMapReadyCa
     private static Double latitude, longitude;
 
 
-
+//Retrieves map, google map code
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class ContactAndLocationFragment extends Fragment implements OnMapReadyCa
         return rootView;
     }
 
+    //Sets the google map options, marker, moveable camera
     @Override
     public void onMapReady(GoogleMap map) {
         mMap = map;
